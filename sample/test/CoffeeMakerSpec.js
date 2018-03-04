@@ -1,4 +1,4 @@
-let { CoffeeMaker } = require("../../build/compiled/prova-nodi/CoffeeMaker.js");
+let { CoffeeMaker } = require("../../build/compiled/just-typescript/CoffeeMaker.js");
 
 
 const mockBean  = () => console.log("fakeBean made");
