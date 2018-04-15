@@ -2,10 +2,9 @@ export interface SugarFactory {
     create () : void;
 }
 
-const sugarFactory : SugarFactory = {
+export const sugarFactory : SugarFactory = {
     create() {
         console.log("sugar created");
     }
 }
 
-export default sugarFactory;

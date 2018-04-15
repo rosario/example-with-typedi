@@ -7,20 +7,18 @@ import {WaterFactory} from "./WaterFactory";
 export class CoffeeMaker {
 
     @Inject()
-    beanFactory: BeanFactory = Container.get(BeanFactory);
+    beanFactory: BeanFactory;
 
     @Inject()
-    sugarFactory: SugarFactory = Container.get(SugarFactory);
+    sugarFactory: SugarFactory;
 
     @Inject()
-    waterFactory: WaterFactory = Container.get(WaterFactory);
+    waterFactory: WaterFactory;
 
     make() {
         this.beanFactory.create();
         this.sugarFactory.create();
         this.waterFactory.create();
-
         console.log("coffee is made");
     }
-
 }

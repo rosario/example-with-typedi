@@ -1,12 +1,12 @@
-import beanFactory  from "./BeanFactory";
-import sugarFactory from "./SugarFactory";
-import waterFactory from "./WaterFactory";
+import {beanFactory}  from "./BeanFactory";
+import {sugarFactory} from "./SugarFactory";
+import {waterFactory} from "./WaterFactory";
 
 export interface CoffeeMaker {
     make () : void
 }
 
-export function CoffeeMaker(
+export function createCoffeeMaker(
     createBean:  Function,
     createSugar: Function,
     createWater: Function ): CoffeeMaker {
@@ -19,6 +19,6 @@ export function CoffeeMaker(
         }
     }
 }
-const coffeeMaker = CoffeeMaker(beanFactory.create, sugarFactory.create, waterFactory.create)
+const coffeeMaker = createCoffeeMaker(beanFactory.create, sugarFactory.create, waterFactory.create)
 
 export default coffeeMaker
